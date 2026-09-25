@@ -435,6 +435,9 @@ button{font-family:inherit}
 }
 .home{position:relative}
 .dedicatoria{position:absolute;right:.9rem;bottom:.7rem;font-size:.62rem;font-style:italic;color:var(--ink-faint);opacity:.8}
+.destaque-tag{display:inline-block;background:#FFF3B0;color:#7A5B00;font-size:.66rem;font-weight:700;padding:.12rem .5rem;border-radius:999px;margin-top:.35rem;vertical-align:middle;letter-spacing:0}
+.licao-secao.marcado{border-left:3px solid #F2C94C;padding-left:.85rem}
+.destaque-btn{border-color:#F2C94C!important;background:#FFFBE6!important}
 .prof-badge{
   display:inline-flex;align-items:center;gap:.3rem;
   background:var(--teal-bg);color:var(--teal);font-size:.68rem;font-weight:800;
@@ -456,11 +459,11 @@ const MATERIA = [
  {k:'reinos', t:'Os quatro reinos helenísticos', p:[
   'Após a morte de Alexandre, o Grande, rei da Macedônia, em 323 a.C., houve cerca de 40 anos de guerras entre seus generais e sucessores. O império foi reorganizado em quatro reinos helenísticos principais:',
   '<strong>Reino Ptolemaico</strong> — fundador Ptolomeu I Sóter; capital Alexandria, no Egito. <strong>Império Selêucida</strong> — fundador Seleuco I Nicátor; Síria, Mesopotâmia, Pérsia e regiões orientais; a Judeia ficou sob seu domínio por um período; Antíoco IV Epífanes foi um de seus reis. <strong>Reino da Macedônia</strong> — dominava a Grécia e a Macedônia. <strong>Reino da Trácia</strong> — governado por Lisímaco (Trácia e oeste da atual Turquia); depois foi quase todo incorporado ao Império Selêucida.']},
- {k:'macabeus', t:'Antíoco IV e a Revolta dos Macabeus', p:[
+ {k:'macabeus', d:1, t:'Antíoco IV e a Revolta dos Macabeus', p:[
   'A Judeia esteve primeiro sob a dinastia ptolemaica e, por volta de 200 a.C., passou ao controle selêucida. A perseguição de Antíoco IV Epífanes foi a causa direta da Revolta dos Macabeus: ele ergueu um altar a deuses pagãos no Templo de Jerusalém e sacrificou um porco (animal impuro para os judeus). Os judeus resistiram, crendo que o templo fora contaminado e Deus blasfemado. Antíoco reagiu queimando a Torá e matando os pais que circuncidavam seus filhos.',
   'Em Modein (Modiin), a noroeste de Jerusalém, os judeus foram forçados a adorar um deus pagão no mercado. O sacerdote Matatias e seus filhos (Joanã, Judas, Eleázer, Jônatas e Simão) se recusaram e lideraram a rebelião — a Revolta dos Macabeus.',
   'As tropas selêucidas fracassaram em reprimi-la. Cerca de 20 anos depois, Simão Macabeu fundou a <strong>dinastia hasmoneana</strong> (142 a.C.), que durou 79 anos, até a conquista romana em 63 a.C.']},
- {k:'helenizacao', t:'Alexandre e a helenização', p:[
+ {k:'helenizacao', d:1, t:'Alexandre e a helenização', p:[
   'Alexandre quis transformar seu território numa unidade cultural e linguística: estabeleceu uma cultura sincrética (síntese do grego clássico com a cultura antiga do Oriente) e o <strong>grego koiné</strong> como língua franca (falado no Mediterrâneo oriental do séc. IV a.C. ao séc. VI d.C.). Essa grande mudança é chamada de "helenização".',
   'A estratégia escolhida foi a construção de cidades helenísticas (<strong>polis</strong>), ligadas por estradas bem pavimentadas, o que facilitou a troca de mercadorias e ideias (cf. Atos 17:21).']},
  {k:'helenismo_israel', t:'Helenismo em Israel', p:[
@@ -470,25 +473,25 @@ const MATERIA = [
  {k:'judaismo', t:'Helenismo × judaísmo', p:[
   '"Helenismo" era o modo de vida exigido por Alexandre: vestir, falar e viver como os gregos. Contra essa onda, alguns judeus procuraram viver de maneira judaica — isso é chamado de "judaísmo". O primeiro a usar a palavra "judaísmo" foi o autor de <strong>2 Macabeus</strong> (2 Mac 8:1).',
   'Ser helenista ou judaizante não era questão de sangue: um judeu étnico podia abandonar o judaísmo e se helenizar, e um gentio podia se tornar judaizante (cf. 2 Mac 4:13).']},
- {k:'faccoes', t:'As facções do judaísmo: elite sacerdotal e saduceus', p:[
+ {k:'faccoes', d:1, t:'As facções do judaísmo: elite sacerdotal e saduceus', p:[
   'Nos dias de Jesus o judaísmo não era homogêneo: várias facções competiam pela posição de "mestres de Israel". Foi nessa arena que Jesus surgiu e atuou.',
   '<strong>1. Elite sacerdotal</strong> — grupo estabelecido pelo AT para ensinar e dirigir o povo; a mais ampla influência e a mais numerosa; provavelmente os "sacerdotes e escribas" do NT.',
   '<strong>2. Saduceus</strong> — subgrupo dentro do grupo sacerdotal, da aristocracia. Segundo Josefo, criam que "a alma perece junto com o corpo" e que "Deus não interfere nos eventos humanos" (semelhantes aos epicuristas). Não criam na escatologia apocalíptica e provavelmente rejeitavam os regulamentos extrabíblicos dos fariseus.']},
- {k:'qumran', t:'A comunidade de Qumran', p:[
+ {k:'qumran', d:1, t:'A comunidade de Qumran', p:[
   'Comunidade de judeus contrários à dinastia hasmoneana. Eram separatistas que deixaram Jerusalém dizendo: "Vamos criar um Israel de verdade por conta própria". Parece ser um ramo dos essênios (Dio Crisóstomo e Plínio situam os essênios às margens do Mar Morto, entre Jericó e En Gedi).',
   'Havia uma raiz comum com os saduceus: dois grupos se opunham aos hasmoneus — um saiu e viveu separado (os qumranitas), outro ficou no centro e lutou (os saduceus), mas com o tempo se conformou com o status quo.',
   'A seita existiu de 140 a.C. a 68 d.C. (conquistada pelos romanos). Sua teologia era fundamentalista: "somos os únicos israelitas verdadeiros, os filhos da luz, e venceremos os filhos das trevas". Hierarquia: sacerdotes, levitas e pessoas comuns.',
   'Para eles, com a ascensão de sacerdotes <strong>não zadoquitas</strong> sob os hasmoneus, o Templo foi corrompido; Deus o abandonou e passou a habitar na comunidade — "nós somos o verdadeiro Israel".',
   'Esperavam <strong>dois Messias</strong>: um sacerdote ungido e um rei ungido; o sumo sacerdote escatológico zadoquita era mais alto que o Messias davídico. O sacerdote restauraria o culto no templo; o rei julgaria as nações gentias e restauraria a dinastia davídica.']},
- {k:'fariseus', t:'Os fariseus', p:[
+ {k:'fariseus', d:1, t:'Os fariseus', p:[
   'Segundo Josefo, eram políticos astutos que surgiram em meados do séc. II a.C. Naquela época, religião e política não se separavam: as facções (exceto Qumran) competiam pelo poder dentro do Império Romano.',
   'Impunham regras não mencionadas no AT para "erguer um muro de proteção" em torno da lei (alimentação, dízimo etc.). Segundo Jacob Neusner, o objetivo era fazer de cada israelita "um sacerdote", cumprindo Êxodo 19:6.',
   'Para isso criaram as <strong>havurot</strong>: grupos para manter a pureza e comer em mesa totalmente kosher, apenas entre os membros. Daí parece vir o nome "fariseu": aquele que se separa.']},
- {k:'zelotes', t:'Os zelotes', p:[
+ {k:'zelotes', d:1, t:'Os zelotes', p:[
   'Melhor caracterizados como <strong>judaísmo militar nacionalista</strong>. Por crerem que só Deus é Senhor, não toleravam o domínio romano e estavam dispostos ao confronto físico.',
   'Segundo Josefo, surgiram em resposta ao censo de <strong>Quirino</strong> (Lc 2:2), pois contar o povo era contra o AT e o censo servia para cobrar impostos. Foram formados por Judas de Gamla e Zadoque, um fariseu. Os filhos de Judas foram executados em 47 d.C.; seu descendente Menahem liderou a revolta de 66. Alguns líderes zelotes se diziam Messias.',
   'A grande revolta de 66–70 foi desencadeada pelos zelotes. No início foi uma guerra civil entre judeus; depois os líderes entregaram o comando da guerra aos zelotes.']},
- {k:'nova_ordem', t:'A nova ordem após 70 d.C.', p:[
+ {k:'nova_ordem', d:1, t:'A nova ordem após 70 d.C.', p:[
   'A destruição do Templo em 70 d.C. trouxe uma nova ordem: sacerdotes e saduceus desapareceram (a base de seu poder acabou); os zelotes foram mortos pelas tropas romanas. Segundo Eusébio, restaram apenas dois grupos: o <strong>judaísmo rabínico</strong> e a <strong>comunidade cristã</strong>.']},
  {k:'palest_helen', t:'Judaísmo palestino × judaísmo helenístico', p:[
   '<strong>Palestino</strong>: Judeia, Galileia e Samaria; hebraico e aramaico; texto hebraico da Bíblia (Tanakh); forte preservação das tradições; centro no Templo; líderes: sacerdotes, escribas, fariseus; pouca influência da filosofia grega; observância rigorosa da Lei. Representantes: Jesus, os Doze, fariseus e escribas.',
@@ -510,11 +513,11 @@ const MATERIA = [
   'Em 63 a.C., após o colapso hasmoneu, os líderes judeus pediram ao general romano Pompeu: 1) abolir a constituição hasmoneia; 2) restaurar a antiga teocracia sacerdotal sob os auspícios romanos.',
   'Motivos: 1) o sumo sacerdote/rei macabeu (Jônatas) não descendia de Zadoque (Ez 40:46; 43:19) nem de Davi; 2) sabiam que Roma reconhecia o judaísmo e não interferia muito.',
   'Mesmo assim houve conflitos: no governo de Herodes, o Grande (37–4 a.C.), e no governo direto do império — 66–70 (Jerusalém destruída), 115–117 e 132–135.']},
- {k:'sinedrio', t:'O Sinédrio', p:[
+ {k:'sinedrio', d:1, t:'O Sinédrio', p:[
   'O mais alto órgão judicial religioso judaico. Roma concedeu aos judeus certa autonomia em questões religiosas e étnicas, exercida pelo Sinédrio. Tinha <strong>70 membros</strong> eleitos entre fariseus e saduceus e era presidido pelo <strong>sumo sacerdote</strong>. O NT o chama de "conselho", "chefes dos sacerdotes, anciãos e escribas" etc.']},
- {k:'tensao', t:'A tensão entre judeus e romanos', p:[
+ {k:'tensao', d:1, t:'A tensão entre judeus e romanos', p:[
   'Roma tinha tolerância religiosa, mas com limites. Tradições judaicas que chocavam: 1) <strong>a circuncisão</strong> — contrária às ideias romanas de beleza física, mas foi tolerada aos poucos; 2) <strong>o desrespeito aos deuses romanos</strong> — por serem monoteístas, os judeus eram tachados de "ateus" e "odiadores dos homens", e houve pogroms já antes do cristianismo; 3) <strong>não se curvar à estátua do imperador</strong> — os judeus eram vistos como politicamente não confiáveis.']},
- {k:'cristaos', t:'Os cristãos da primeira geração', p:[
+ {k:'cristaos', d:1, t:'Os cristãos da primeira geração', p:[
   'Os cristãos judeus tinham os mesmos direitos e liberdade religiosa dos judeus tradicionais. Os cristãos gentios, porém, continuavam romanos aos olhos das autoridades e deviam viver o politeísmo (adorar o imperador e os deuses). Sofriam o preconceito contra os judeus sem ter a proteção dada aos judeus.',
   'A resposta típica das autoridades: 1) ignorá-los, por serem poucos; 2) esperar que desaparecessem; 3) quando descobriam ofensas (não se curvar à estátua do imperador etc.), vinham acusações, denúncias e perseguições.']},
  {k:'diaspora', t:'Os judeus da diáspora', p:[
@@ -526,7 +529,7 @@ const MATERIA = [
   'O ministério de Jesus concentrou-se em vilas judaicas tradicionais (Nazaré, Cafarnaum, Caná, Naim, Corazim). Ele visitou regiões helenizadas — Decápole (Mc 7:31), Gerasa (Mc 5), Tiro e Sidom (Mc 7:24–30) — mas não há registro de ministério regular e prolongado nelas.']}
 ]},
 {id:3, tag:'Aula', n:'3', titulo:'Das tradições aos Evangelhos', secoes:[
- {k:'processo', t:'Das tradições ao Evangelho de Marcos', p:[
+ {k:'processo', d:1, t:'Das tradições ao Evangelho de Marcos', p:[
   'O processo: movimento do Reino de Deus iniciado por Jesus → ascensão → surgimento das tradições sobre Jesus → transmissão oral (período das tradições orais) → morte dos apóstolos e necessidade de ensinar os novos convertidos → tradições escritas → surgimento do Evangelho de Marcos, sob a inspiração do Espírito Santo.',
   'Após a ascensão, os seguidores transmitiam oralmente histórias curtas sobre Jesus (milagres, ensinos, exorcismos etc.). Cada uma é chamada de "tradição de Jesus", e o período em que eram transmitidas oralmente é o "período das tradições orais".']},
  {k:'curtas', t:'Por que as tradições eram curtas', p:[
@@ -534,7 +537,7 @@ const MATERIA = [
   'A tradição escrita podia ter várias formas: pequenas unidades (ditos, parábolas, milagres, controvérsias), narrativas maiores (paixão), coleções, Q, o "evangelho do Nazareno" (documento hipotético) e, por fim, os próprios Evangelhos.']},
  {k:'marcos_data', t:'Por que Marcos foi escrito tão tarde?', p:[
   'Marcos provavelmente foi escrito em meados dos anos 60, cerca de 30 anos após a ascensão. Explicações: 1) a expectativa entusiástica da parusia iminente; 2) a percepção judaica de que a tradição oral era mais sagrada que a escrita.']},
- {k:'sitz', t:'Perícopes e Sitz im Leben', p:[
+ {k:'sitz', d:1, t:'Perícopes e Sitz im Leben', p:[
   'As tradições eram usadas em várias ocasiões da igreja primitiva (<strong>Sitz im Leben</strong>): sermões, evangelismo, catecismo, apologética, resolução de conflitos.',
   'Cada tradição é uma unidade literária autônoma — uma narrativa completa, "uma peça de um só ato", não um episódio de série. Circulavam de forma independente. Os críticos da forma as chamam de <strong>perícopes</strong>.',
   'Os críticos da forma identificam as perícopes, classificam seus gêneros, reconstroem suas formas originais e investigam o Sitz im Leben de cada categoria. Ex.: histórias de pronunciamento → sermões; histórias de milagres → apologética (evidenciar a divindade de Jesus); ditos legais → disputas na igreja.']},
@@ -555,9 +558,10 @@ const MATERIA = [
  {k:'alegoria_judaica', t:'Os judeus conheciam a alegoria?', p:[
   'Sim: no cântico da vinha (Is 5), a vinha = Israel e o dono = Deus; e Jesus, ao explicar o semeador (Mt 13), faz correspondências (semente = palavra; solo = corações). A alegoria não era estranha à cultura judaica.',
   'No início do séc. XX, Adolf <strong>Jülicher</strong> defendeu que a parábola tem apenas uma mensagem central; pesquisas posteriores acharam isso simplificador. Hoje: 1) a parábola comunica uma afirmação central ou alguns focos; 2) em alguns casos certos elementos têm sentido simbólico; 3) nem todos os detalhes são códigos.']},
- {k:'leitura_publico', t:'Como o público de Jesus lia as parábolas', p:[
+ {k:'leitura_publico', d:1, t:'Como o público de Jesus lia as parábolas', p:[
   'Os ouvintes buscavam o desafio central e a mensagem sobre o Reino, não alegorizar cada detalhe. Razões: 1) o AT já usa a parábola como gênero — Natã conta a Davi a história da cordeirinha (2Sm 12): "Tu és esse homem!"; 2) no judaísmo já existia o <strong>mashal</strong> (parábola, provérbio, ilustração, fábula: comunicar uma verdade profunda por algo familiar) — Jesus não criou um novo gênero, usou um existente; 3) Jesus explica muito menos parábolas do que se esperaria ("Quem tem ouvidos para ouvir, ouça"); 4) os discípulos pediam o significado da parábola como um todo.',
-  'O gênero determina a leitura: a parábola leva a perguntar "O que esta história pretende comunicar?"; a literatura apocalíptica, "A que se refere este símbolo ou visão?"; a narrativa histórica, "O que aconteceu?". O público de Jesus era uma comunidade interpretativa que lia cada gênero de modo apropriado.']},
+  'O gênero determina a leitura: a parábola leva a perguntar "O que esta história pretende comunicar?"; a literatura apocalíptica, "A que se refere este símbolo ou visão?"; a narrativa histórica, "O que aconteceu?". O público de Jesus era uma comunidade interpretativa que lia cada gênero de modo apropriado.',
+  '<strong>Implicação exegética</strong> (pergunta da aula): se o autor escreveu num determinado gênero e os primeiros leitores o leram segundo as convenções desse gênero, será que nosso esforço exegético hoje pode chegar ao significado pretendido pelo autor, sob a inspiração do Espírito Santo, sem usar o mesmo método de leitura?']},
  {k:'sermao_critica', t:'Crítica de um sermão (Mc 4:35–41)', p:[
   'Um pregador interpretou a tempestade acalmada como alegoria: "Como o cristão pode vencer vivendo em meio às ondas da vida". Crítica: a mensagem central dessa tradição é a autoridade e a identidade de Jesus — a pergunta culminante é "Quem é este que até o vento e o mar lhe obedecem?". Confiar em Jesus nas crises é verdade, mas não é o foco do texto.']},
  {k:'discurso', t:'4. Discurso', p:[
@@ -568,14 +572,14 @@ const MATERIA = [
   'Termos como "lenda" e "mito" foram escolhidos por estudiosos liberais; os evangélicos devem entender as definições e não se confundir com os nomes.']},
  {k:'mito', t:'6. Mito', p:[
   'Tradições que envolvem a intervenção direta de Deus na história humana. Ex.: a voz de Deus na transfiguração e no batismo.']},
- {k:'criticas', t:'Críticas à crítica da forma', p:[
+ {k:'criticas', d:1, t:'Críticas à crítica da forma', p:[
   '1) As tradições nem sempre pertencem a um gênero preciso: Mc 2:1–12 é milagre ou pronunciamento? O mesmo vale para Mc 3:1–6.',
   '2) Os primeiros críticos da forma achavam que os evangelistas só faziam "tesoura e cola". Na verdade eram <strong>autores criativos</strong>, que selecionaram e organizaram tradições numa obra com começo, desenvolvimento e fim (analogia das pérolas e do colar de pérolas).',
   '3) Apesar das críticas iniciais dos conservadores, hoje a crítica da forma é uma das ferramentas mais importantes para analisar os Evangelhos.',
   '4) São necessárias duas abordagens: analisar as tradições individuais (crítica da forma) e analisar cada Evangelho como obra inteira (crítica narrativa ou narratologia).']}
 ]},
 {id:4, tag:'Aula', n:'4', titulo:'O problema dos sinóticos', secoes:[
- {k:'definicao', t:'O que é o problema sinótico', p:[
+ {k:'definicao', d:1, t:'O que é o problema sinótico', p:[
   'Os sinóticos são os três primeiros Evangelhos (Mateus, Marcos e Lucas), que podem ser vistos juntos por serem semelhantes em descrição, vocabulário e ordem dos eventos. João não faz parte, pois é muito diferente.',
   'Fenômenos observados: 1) algumas histórias aparecem nos três; 2) algumas passagens são comuns só a Mateus e Lucas; 3) às vezes as palavras são quase idênticas; 4) ao mesmo tempo, há diferenças de ordem, conteúdo e expressão.',
   'Em resumo, o problema sinótico é o problema de <strong>determinar a relação literária entre os sinóticos</strong>: quem usou quem? Havia fontes comuns? Qual foi escrito primeiro?']},
@@ -583,27 +587,27 @@ const MATERIA = [
   'Teoria: explicação sistemática baseada em muitas evidências. Hipótese: explicação proposta com base em algumas evidências, que ainda precisa ser testada. Conjectura: conclusão com informações incompletas. Suposição: algo aceito sem evidências suficientes. Especulação: ideia sem evidências sólidas.',
   'Ordem pela força das evidências: <strong>teoria → hipótese → conjectura → suposição → especulação</strong> (a ordem entre as três últimas não é absoluta).',
   'Fala-se em "hipótese" das duas fontes porque a existência da fonte Q ainda não foi comprovada: nenhum documento dela foi encontrado.']},
- {k:'paralelos', t:'Semelhanças: versículos paralelos e ordem', p:[
+ {k:'paralelos', d:1, t:'Semelhanças: versículos paralelos e ordem', p:[
   'Versículo paralelo é um versículo semelhante ou idêntico em outro Evangelho (ex.: Mc 10:13 ↔ Lc 18:15). Vocabulário, descrições e construção das frases são frequentemente semelhantes ou idênticos. Ferramenta útil: <em>Synopsis of the Four Gospels</em>.',
   'A ordem dos eventos menores da vida de Jesus também é semelhante. Mateus, sobretudo do cap. 12 em diante, segue de perto a ordem de Marcos.']},
  {k:'malaquias', t:'A citação de Malaquias 3:1', p:[
   'Os sinóticos citam Ml 3:1a (Mt 11:10; Mc 1:2; Lc 7:27). Há 4 diferenças entre a LXX e os sinóticos, e onde diferem da LXX eles concordam entre si. Todos usam "preparará" (kataskeuasei) em vez de "olhará" (epiblepsetai) da LXX. É improvável que cada um tenha traduzido o Texto Massorético sozinho e chegado às mesmas palavras.',
   'Inferência: os autores não dependeram de fontes externas (LXX, Targum, AT), mas uns dos outros (dependência interna). A próxima pergunta é a da <strong>prioridade</strong>: qual foi escrito primeiro?',
   'Marcos 1:2 é uma <strong>citação composta</strong>: une Êxodo 23:20, Malaquias 3:1 e Isaías 40:3, atribuída a Isaías (costume antigo de citar o profeta mais proeminente — o tema do "novo êxodo" de Is 40). Copistas bizantinos, sem entender isso, mudaram para "nos profetas".']},
- {k:'prioridade', t:'Explicações da prioridade', p:[
+ {k:'prioridade', d:1, t:'Explicações da prioridade', p:[
   '1) <strong>Agostinho</strong>: Mateus → Marcos → Lucas. Nenhum ou poucos apoiadores.',
   '2) <strong>Griesbach e Farmer</strong>: Mateus primeiro, Lucas usou Mateus, e Marcos foi o último, um resumo dos dois. Minoria.',
   '3) <strong>Holtzmann e Streeter — hipótese das duas fontes (2SH)</strong>: Marcos primeiro; Mateus e Lucas usaram, de forma independente, Marcos e uma fonte perdida de ditos chamada Q (de <em>Quelle</em>, "fonte" em alemão). A mais aceita.',
   '4) <strong>Farrer-Goulder</strong>: Marcos primeiro, Mateus usou Marcos, e Lucas usou Marcos e Mateus — dispensando Q. Base: artigo de Austin Farrer (1955), "On Dispensing with Q". Minoria, mas em crescimento.']},
- {k:'marcos_primeiro', t:'Justificativas da prioridade de Marcos', p:[
+ {k:'marcos_primeiro', d:1, t:'Justificativas da prioridade de Marcos', p:[
   'a) Marcos é o mais curto: Mateus e Lucas o usaram acrescentando material. Se Marcos tivesse usado Mateus, por que omitiria o nascimento, o Sermão do Monte, o Pai Nosso e as aparições da ressurreição?',
   'b) As frases de Marcos foram melhoradas por Mateus e Lucas (gramática, construção, hebraísmos).']},
- {k:'evidencias', t:'Evidências da interdependência literária', p:[
+ {k:'evidencias', d:1, t:'Evidências da interdependência literária', p:[
   'a) <strong>Acordos verbais</strong>: 97,2% de Marcos tem paralelos em Mateus e 88,4% em Lucas; no grego há centenas de palavras coincidentes. b) <strong>Conteúdo</strong>: mesmas estruturas de frases e até formas gramaticais. c) <strong>Mesma ordem das perícopes</strong> (de João Batista à crucificação). d) <strong>Cláusulas parentéticas</strong> comuns, como "quem lê, entenda". e) <strong>Tradição tripla</strong> (comum aos três) e <strong>tradição dupla</strong> (Mateus e Lucas, ausente em Marcos, ex.: trechos do Sermão do Monte).',
   'Conclusão: é mais razoável aceitar que Marcos foi escrito primeiro e Mateus e Lucas o usaram do que o contrário.']},
- {k:'mt_lc_independentes', t:'Mateus e Lucas não se conheciam', p:[
+ {k:'mt_lc_independentes', d:1, t:'Mateus e Lucas não se conheciam', p:[
   'Não houve dependência literária entre Mateus e Lucas. Se se conhecessem, Mateus teria usado o relato mais completo de Lucas sobre o nascimento, e Lucas o Sermão do Monte de Mateus.']},
- {k:'q', t:'A fonte Q', p:[
+ {k:'q', d:1, t:'A fonte Q', p:[
   'Além de Marcos, Mateus e Lucas tinham outra fonte comum: uma coleção de ditos de Jesus chamada Q (<em>Quelle</em>). Os versículos comuns a Mateus e Lucas que não estão em Marcos exigem uma fonte comum escrita em grego.',
   'Q não existe hoje e não é citada na antiguidade, mas deve ter existido; senão não há explicação para esses versículos. Q consiste em uma narrativa mínima e ditos de Jesus. Assim, as duas fontes de Mateus e Lucas são <strong>Marcos e Q</strong>. Por ser hipótese, está aberta a uma explicação melhor.']},
  {k:'contra_griesbach', t:'Contra a hipótese de Griesbach', p:[
@@ -611,15 +615,16 @@ const MATERIA = [
  {k:'contra_farrer', t:'Contra a hipótese de Farrer-Goulder', p:[
   '1) O "massacre" do Sermão do Monte: Lucas teria desmontado o sermão bem ordenado de Mateus 5–7 e espalhado seus pedaços. 2) Os acordos menores: se Lucas tinha Mateus aberto, por que ora segue Mateus, ora Marcos, de modo aparentemente aleatório? 3) A redução teológica: Lucas teria feito cortes e reescritas drásticas em um texto tido como apostólico.',
   'Em suma: a hipótese elimina a Q "invisível", mas a substitui por um problema maior — um comportamento editorial de Lucas complexo e difícil de justificar.']},
- {k:'quatro', t:'A hipótese de quatro documentos', p:[
+ {k:'quatro', d:1, t:'A hipótese de quatro documentos', p:[
   'Formulada por B. H. Streeter em 1924, amplia a hipótese das duas fontes: há material exclusivo de Mateus (fonte <strong>M</strong>) e exclusivo de Lucas (fonte <strong>L</strong>). Fórmula: <strong>Marcos + Q + M + L = Mateus e Lucas</strong>.']}
 ]},
 {id:6, tag:'Aula', n:'6', titulo:'Narrativas bíblicas', secoes:[
  {k:'autor_soberano', t:'O autor é o soberano do mundo narrativo', p:[
   'O autor não registra tudo o que aconteceu; ele faz escolhas: qual período apresentar, quais acontecimentos e personagens, o que dizer e o que omitir, em que ordem, como descrever, onde começar e como terminar. O mundo narrativo é construído a partir dessas escolhas.']},
- {k:'convite', t:'O autor convida o leitor', p:[
+ {k:'convite', d:1, t:'O autor convida o leitor', p:[
   'O autor quer que o leitor entre no mundo da narrativa e siga o caminho que ele construiu. O leitor então sente (emoção), pensa (reflexão), se identifica com os personagens (empatia), julga (avaliação), avalia valores e, às vezes, decide como agir.',
-  'Antes de escrever, o autor já tem em mente o efeito que deseja produzir e seleciona e organiza os elementos para conduzir o leitor a essa reação.']},
+  'Antes de escrever, o autor já tem em mente o efeito que deseja produzir e seleciona e organiza os elementos para conduzir o leitor a essa reação.',
+  '<strong>Em uma frase:</strong> na narrativa, o autor constrói um mundo narrativo ao selecionar e organizar o período histórico, os acontecimentos, os personagens, a ordem dos acontecimentos e a maneira como são descritos. Ele convida o leitor para dentro desse mundo; o leitor sente, pensa e julga por meio dos personagens e, às vezes, toma decisões sobre sua própria vida. Uma narrativa bem construída conduz o leitor à reação que o autor pretende.']},
  {k:'elementos', t:'Elementos da narrativa', p:[
   '<strong>Enredo</strong> (o que acontece; tensão, clímax, resolução); <strong>personagens</strong> (protagonistas, antagonistas, secundários); <strong>tempo</strong> (inclui flashback/analepse); <strong>espaço/cenário</strong>; <strong>narrador</strong> (quem conta); <strong>ponto de vista</strong> (de que perspectiva); <strong>conflito</strong> (a força que impulsiona a narrativa); <strong>tema</strong> (a ideia central).']},
  {k:'narrador', t:'O narrador nos Sinóticos', p:[
@@ -629,15 +634,15 @@ const MATERIA = [
   'As narrativas judaicas e gregas do séc. I também selecionavam e organizavam eventos para influenciar o leitor. Josefo, por exemplo: seleciona acontecimentos, os ordena, coloca personagens fazendo longos discursos, descreve uns positiva e outros negativamente, e mostra como entender as causas.',
   'Os historiadores antigos não registravam os discursos palavra por palavra: mostravam o que a pessoa <strong>provavelmente teria dito</strong> naquela situação e suas motivações (tradição da historiografia grega). A estrutura é: evento → interpretação → avaliação → reação do leitor.',
   'Marcos também não quer só informar que Jesus morreu na cruz: o leitor que aceita o convite percebe que Jesus é o Messias que sofre e que o verdadeiro discípulo segue seu caminho, e se pergunta: "Eu compreendia Jesus corretamente?". A diferença é que os antigos não usavam a teoria moderna da narratologia.']},
- {k:'biblicas', t:'A perspectiva exegética', p:[
+ {k:'biblicas', d:1, t:'A perspectiva exegética', p:[
   'Grande parte da Bíblia é narrativa (Gênesis, Êxodo, Juízes, Samuel, Reis, Evangelhos, Atos). Ao lê-las, a pergunta fundamental é: <strong>"O que Deus quis comunicar aos leitores originais por meio desta história?"</strong> — a perspectiva exegética. A natureza do texto determina a abordagem: o autor construiu a narrativa para comunicar uma mensagem.']},
- {k:'inadequadas', t:'Perspectivas inadequadas', p:[
+ {k:'inadequadas', d:1, t:'Perspectivas inadequadas', p:[
   '1) <strong>Precisão histórica</strong>: perguntar apenas "qual foi exatamente o fato?". Ex.: a ordem na morte de Jesus — Mc 15:37–38: grito → morte → véu rasgado; em Lucas (23:45–46) o véu se rasga antes da morte. Os evangelistas não estão dando uma cronologia detalhada.',
   '2) <strong>Pressupor a historicidade literal de tudo</strong>. Ex.: as <em>ipsissima verba</em> ("as próprias palavras") de Jesus na Ceia não são idênticas em Mt 26:26–29, Mc 14:22–25, Lc 22:14–20 e 1Co 11:23b–26. E o aviso sobre o traidor: em Mateus e Marcos vem durante a refeição; em Lucas, depois de repartir o pão e o cálice, no final da Ceia.',
   '3) <strong>Ver as narrativas apenas como material de pesquisa</strong> (histórica, social, arqueológica...). É possível e necessário, mas não deve ser a primeira nem a principal abordagem: antes, pergunte "o que esta narrativa pretende comunicar?".']},
- {k:'abordagens', t:'Abordagens necessárias', p:[
+ {k:'abordagens', d:1, t:'Abordagens necessárias', p:[
   '1) <strong>Exegética</strong>: o que o autor (e Deus) quis comunicar aos leitores originais? 2) <strong>Narratológica</strong>: o que a narrativa, como texto unificado e contínuo, comunica? (ex.: o motivo do segredo em Marcos só é entendido lendo Marcos como um todo). 3) <strong>Redacional</strong>: o que cada perícope comunica na forma como o autor a escreveu?']},
- {k:'camadas', t:'As camadas de comunicação', p:[
+ {k:'camadas', d:1, t:'As camadas de comunicação', p:[
   'Narrativa secular: autor (personagens) → leitores originais. Narrativa bíblica: [autor (personagens) → leitores originais] → cristãos de todas as gerações.',
   'Camadas: 1ª entre os personagens; 2ª entre o autor e os leitores originais; 3ª entre Deus e seu povo nas gerações posteriores. A <strong>inspiração</strong> possibilitou a 2ª camada; a <strong>canonização</strong> possibilitou a 3ª.',
   'Livro recomendado: <em>Entendes o que lês?</em>, de Gordon D. Fee e Douglas Stuart (Vida Nova, 4ª ed.).']}
@@ -662,10 +667,10 @@ const MATERIA = [
   'Não eram judeus tradicionais criados na Palestina: em 14:36 Marcos traduz "Abba" por "Pai", o que seria desnecessário para eles.',
   'Mas conheciam o judaísmo: Marcos cita o AT, faz alusões que exigem conhecê-lo e usa linguagem apocalíptica judaica (Mc 13; Dn 7); fala do reino de Deus e do Messias; a tese de 1:1–15 (Jesus é o Messias) se baseia em Ml 3:1 e Is 40:3.',
   'Conclusão: uma comunidade cristã fora da Palestina, formada majoritariamente por <strong>cristãos judeus da diáspora</strong> com alguma familiaridade com o judaísmo.']},
- {k:'resumo_comunidade', t:'6. Resumo: perseguição e apostasia', p:[
+ {k:'resumo_comunidade', d:1, t:'6. Resumo: perseguição e apostasia', p:[
   'Os leitores enfrentavam uma realidade que parecia contrária à sua cristologia e escatologia e, longe de Jerusalém, corriam o risco de abandonar a fé (alguns talvez já tivessem voltado ao judaísmo ou à religião helenística). Duas palavras caracterizam a comunidade: <strong>perseguição e apostasia</strong>.',
   'Teologia da glória → perseguição → crise teológica → apostasia.']},
- {k:'proposito', t:'O propósito do autor', p:[
+ {k:'proposito', d:1, t:'O propósito do autor', p:[
   '1:1 é uma declaração indireta do propósito: pregar o evangelho de que Deus agiu para efetuar seu governo soberano por meio de Jesus.',
   'Os leitores já conheciam o evangelho. Por que repeti-lo? Para: a) levá-los de novo à convicção de que Jesus é o Messias; b) esfriar o entusiasmo escatológico pela parusia imediata; c) enfatizar que o caminho dos seguidores de Jesus é o <strong>caminho da cruz</strong>. Marcos reescreveu a história que eles já tinham ouvido para corrigir erros e fortalecer a fé na perseguição.']},
  {k:'autoria', t:'Autoria: a posição tradicional', p:[
@@ -682,49 +687,49 @@ const MATERIA = [
   '<strong>Data</strong>: meados dos anos 60 d.C. <strong>Local</strong>: desconhecido; Roma é tradicionalmente o mais provável, mas as evidências não são conclusivas (Síria/Antioquia também é proposta).',
   '<strong>Final</strong>: não temos o original, e os manuscritos diferem. Há quatro versões: 1) até o v. 8; 2) v. 8 + um final curto (muitas palavras não marcanas, estilo diferente); 3) até o v. 20 (tradicional); 4) até o v. 14 + um acréscimo sobre o domínio de Satanás (pouca evidência externa, expressões não marcanas).',
   'A versão 1 (até o v. 8) é considerada original; a 3 é a tradicionalmente usada, por isso os vv. 9–20 aparecem entre colchetes [ ].']},
- {k:'sanduiche', t:'O sanduíche de Marcos', p:[
+ {k:'sanduiche', d:1, t:'O sanduíche de Marcos', p:[
   'Técnica em que uma história é interrompida por outra e depois retomada (<strong>A–B–A</strong>), para relacionar as duas, destacar temas, aumentar a tensão e fazer uma interpretar a outra.',
   '<strong>Figueira seca</strong> (11:12–14) / purificação do templo (11:15–19) / figueira seca (11:20–25): assim como a figueira chegou ao fim, o templo corrupto também chegará. <strong>Filha de Jairo</strong> (5:21–24) / mulher com hemorragia (5:25–34) / Jairo (5:35–43): ênfase na fé em Jesus, o Messias, agente do governo de Deus.',
   '<strong>3:20–35</strong>: família de Jesus / acusação de Belzebu / família — a verdadeira família são os que fazem a vontade de Deus. <strong>6:7–32</strong>: envio dos Doze / morte de João Batista / retorno — o ministério pode envolver sofrimento e morte, e prepara para o sofrimento de Jesus. <strong>14:1–11</strong>: conspiração / mulher de Betânia / Judas — contraste entre os que querem matar Jesus e a mulher que o honra, preparando seu sepultamento (14:8).']},
- {k:'tema', t:'O tema do Evangelho de Marcos', p:[
+ {k:'tema', d:1, t:'O tema do Evangelho de Marcos', p:[
   'O tema central é <strong>a identidade de Jesus e suas implicações para o discipulado</strong>. Até 8:26 Jesus esconde sua identidade; em <strong>8:27</strong> ele mesmo inicia um diálogo sobre ela, que termina revelando-o como o servo sofredor. 8:27 é o ponto de virada; a identidade é repetida em 10:45 e 15:39.']}
 ]},
 {id:8, tag:'Aula', n:'8', titulo:'O motivo do segredo messiânico', secoes:[
  {k:'redacao', t:'A crítica da redação de Marcos', p:[
   'Não conhecemos as fontes de Marcos. Como fazer crítica da redação? 1) Identificar as frases que o próprio Marcos escreveu: os <strong>resumos</strong> — 1:14–15 (todo o ministério de Jesus), 3:7–12 (ministério na Galileia), 6:53–56 (em Genesaré); as <strong>linhas de junção</strong> (seams), como 4:1–2, que preparam a coleção de parábolas; e <strong>1:1</strong>, a introdução, onde Marcos afirma que Jesus é o "Filho de Deus", título messiânico.',
   '2) A <strong>seleção</strong> dos materiais: Marcos os escolheu porque serviam ao seu propósito. 3) A <strong>ordem</strong> dos materiais: pelo arranjo, ele diz aos leitores o que quer dizer.']},
- {k:'ordem_8_10', t:'Exemplo: a ordem em 8:31–10:45', p:[
+ {k:'ordem_8_10', d:1, t:'Exemplo: a ordem em 8:31–10:45', p:[
   'Marcos repete três vezes a sequência: <strong>predição da paixão → erro dos discípulos → ensino sobre discipulado</strong> (9 tradições em 3 repetições).',
   '1º ciclo: 8:31–32a / 8:32b–33 (Pedro repreende Jesus) / 8:34–9:1. 2º ciclo: 9:30–32 / 9:33–34 (discutem quem é o maior) / 9:35–10:31. 3º ciclo: 10:32–34 / 10:35–41 (Tiago e João) / 10:42–45.']},
- {k:'motivo_ordem', t:'O motivo dessa ordem', p:[
+ {k:'motivo_ordem', d:1, t:'O motivo dessa ordem', p:[
   'Dizer aos leitores: "Conheçam Jesus como o Servo sofredor e sejam seus legítimos seguidores, não só esperando bênçãos". O discípulo deve estar disposto a perder a vida por Cristo (8:34–35), ser servo de todos (9:35), participar não só da glória mas também do sofrimento (10:17–31) e beber o cálice de Jesus (10:38–39; cf. 14:36).']},
- {k:'definicao', t:'O que é o motivo do segredo messiânico', p:[
+ {k:'definicao', d:1, t:'O que é o motivo do segredo messiânico', p:[
   'Um <strong>motivo</strong> é um elemento recorrente numa narrativa, fundamental para entendê-la. Em Marcos, Jesus reprime conversas sobre sua identidade e manda ficar quieto: é o "motivo do segredo messiânico". Na primeira metade, o Jesus de Marcos esconde sua identidade.']},
  {k:'ordens', t:'"Fique quieto!": a quem e quando', p:[
   'Jesus ordena silêncio: aos <strong>demônios</strong> (1:24–25; 1:34; 3:11–12); aos <strong>curados</strong> (1:44; 5:43; 7:36; 8:26); aos <strong>discípulos</strong> (8:30; 9:9 — Pedro, Tiago e João após a transfiguração).',
   'Situações: 3:11–12 curou muitos; 1:24–25 ensinou com autoridade; 1:34 curou muitas doenças; 1:44 curou um leproso; 5:43 ressuscitou uma menina; 7:36 curou um surdo e mudo; 8:26 curou um cego; 8:30 Pedro diz "Tu és o Cristo"; 9:9 após a transfiguração.']},
- {k:'locais', t:'Onde estão as ordens de silêncio', p:[
+ {k:'locais', d:1, t:'Onde estão as ordens de silêncio', p:[
   'Todas estão na primeira metade (1:1–8:26), exceto duas: 8:30 e 9:9. Em 8:30 o motivo vem logo a seguir: no v. 31 Jesus, sem negar que é o Messias, acrescenta outro aspecto de sua identidade — o <strong>Filho do Homem sofredor</strong>.',
   'Depois dessa primeira apresentação (8:31), a ordem de silêncio não se repete, exceto em 9:9. Na segunda metade, ao contrário, o próprio Jesus inicia a conversa sobre sua identidade (8:27: "Quem as pessoas dizem que eu sou?").',
   'Pergunta da aula: por que "exceto em 9:9"? Repare que 9:9 limita o silêncio "até que o Filho do Homem ressuscite dentre os mortos".']},
- {k:'sinoticos', t:'As ordens de silêncio nos Sinóticos', p:[
+ {k:'sinoticos', d:1, t:'As ordens de silêncio nos Sinóticos', p:[
   '<strong>Marcos: 9</strong> (1:25; 1:34; 1:44; 3:12; 5:43; 7:36; 8:26; 8:30; 9:9). <strong>Mateus: 4 + 1 = 5</strong> (8:4; 12:16; 16:20; 17:9; e 9:30, exclusivo de Mateus, da fonte M). <strong>Lucas: 5</strong> (4:35; 4:41; 5:14; 8:56; 9:21).',
   'Mateus e Lucas, muito mais longos, têm metade das ordens e omitem algumas de propósito (ex.: Mt 9:26 × Mc 5:43). Nenhum outro Evangelho repete o comando de forma tão constante quanto Marcos. No Evangelho de João, ao contrário, Jesus anuncia ativamente sua identidade: "Eu sou o pão da vida" (6:35), "a luz do mundo" (8:12), "a porta" (10:7), "o bom pastor" (10:11), "a ressurreição e a vida" (11:25), "o caminho" (14:6), "a videira verdadeira" (15:1).',
   'Conclusão: o comando frequente de silêncio é peculiar de Marcos e intencional desde a concepção do Evangelho.']},
  {k:'wrede', t:'A explicação histórica (e por que é insatisfatória)', p:[
   'O alemão <strong>W. Wrede</strong> foi o primeiro a identificar esse recurso literário. A primeira explicação é a <strong>histórica</strong>: Jesus realmente mandou ficar quieto, com medo de ser tomado como messias político-militar e levar a uma revolta anti-romana.',
   'É possível, mas insatisfatória: 1) na entrada em Jerusalém (11:1–10) o povo o recebe como Messias com o título "Aquele que vem em nome do Senhor" (11:9; Sl 118:26, lido de forma messiânica), e Jesus não manda silêncio; 2) em 5:42–43, a notícia de uma ressurreição se espalharia de qualquer jeito; 3) em 1:40–45, a ordem ao leproso já é quebrada no v. 45.']},
- {k:'cristologica', t:'A explicação cristológica e pastoral', p:[
+ {k:'cristologica', d:1, t:'A explicação cristológica e pastoral', p:[
   'Mais convincente: Marcos queria apresentar à comunidade o <strong>Messias sofredor e crucificado</strong>. Como? a) Insinuando que o entendimento de um messias só de glória e triunfo é inadequado — mostrando Jesus mandando silêncio justamente quando é reconhecido como messias glorioso. b) Destacando a identidade oposta na segunda metade: o Messias sofredor (8:31; 9:9, 31; 10:33–34, 45; 14:...).',
   'O clímax é <strong>10:45</strong>, a proclamação cristológica mais destacada de Marcos, confirmada em <strong>15:39</strong>, quando o centurião diz: "Verdadeiramente este homem era o Filho de Deus". 10:45 com 15:39 são: o clímax da cristologia de Marcos; a razão do motivo do segredo; o grito de Marcos à sua comunidade; e a voz de Deus a todos os cristãos que conhecem Jesus só como Messias de glória, triunfo, riqueza e sucesso.']},
- {k:'estrutura', t:'A estrutura de Marcos', p:[
+ {k:'estrutura', d:1, t:'A estrutura de Marcos', p:[
   '<strong>Primeira parte (1:1–8:26)</strong>: Jesus silenciador — manda calar, mas não nega o aspecto de Messias glorioso. <strong>Seção central (8:27–10:45)</strong>: Jesus inicia o diálogo "Quem dizem que eu sou?" (8:27, 29), que conclui com o Filho do Homem sofredor (8:31). Ele não interrompe o diálogo em 8:30 nem nega a confissão de Pedro (8:29); acrescenta o aspecto que queria mostrar. A partir daí dominam as tradições com o título "Filho do Homem", que apresentam o Servo sofredor.',
   '<strong>Parte final</strong>: Jesus sofre de acordo com a identidade revelada na parte central. A estrutura sugere que a tese central de Marcos é: <strong>Jesus é o Servo sofredor</strong>.']},
- {k:'conclusao', t:'Conclusão', p:[
+ {k:'conclusao', d:1, t:'Conclusão', p:[
   'Marcos usa o motivo do segredo para reafirmar que Jesus é o Servo sofredor, que obedece à vontade de Deus até a morte. Ele não nega que Jesus seja o Messias glorioso, mas enfatiza o Servo sofredor — ênfase necessária para uma comunidade em sofrimento e perseguição.']}
 ]},
 {id:101, tag:'Reino', n:'1', titulo:'O que é o reino de Deus?', secoes:[
- {k:'centralidade', t:'A centralidade do reino', p:[
+ {k:'centralidade', d:1, t:'A centralidade do reino', p:[
   'O reino de Deus era o centro do ministério de Jesus: Mc 1:15 (resumo de sua proclamação); Mt 10:5–15 (envia os discípulos a fazer o mesmo, v. 7); assunto frequente de seus ensinos (Mt 13); o Pai Nosso; o Sermão do Monte (Mt 5:3–7:27); "o evangelho do reino" (Mt 24:14); e o centro do ministério pós-ressurreição (At 1:3b).']},
  {k:'historia', t:'Interpretações: da igreja aos liberais', p:[
   '<strong>De Agostinho aos reformadores</strong>: o reino de Deus = a igreja.',
@@ -734,9 +739,9 @@ const MATERIA = [
   'O AT não tem a frase "reino de Deus", mas João Batista e Jesus a usaram sem explicá-la, e o público entendeu. Logo, a frase era corrente: foi criada no período intertestamentário, e é na LAJI que devemos estudá-la.',
   'Na LAJI a frase significava <strong>"as ações de Deus que salvam ou libertam seu povo, na última era, das mãos do seu inimigo"</strong> — exatamente o sentido na boca de Jesus.',
   'Com os judeus dominados por impérios sucessivos (Assírio, Babilônico, Persa, Grego, Romano) e cerca de 420 anos sem melhora entre Malaquias e João Batista, os escritores voltaram os olhos para a realidade celestial, onde Deus reina sem oposição, e para as promessas do Messias. Esse gênero é a literatura apocalíptica judaica, chamada de <strong>"literatura de crise"</strong>, por encorajar a fé em tempos difíceis. Sua origem é a literatura profética do AT (Isaías, Ezequiel, Daniel), com forma plena no período intertestamentário.']},
- {k:'weiss', t:'Johannes Weiss', p:[
+ {k:'weiss', d:1, t:'Johannes Weiss', p:[
   'Aluno e genro de Albrecht Ritschl, estudou a frase à luz do apocaliptismo judaico. Conclusão: o reino é essencialmente um <strong>conceito apocalíptico</strong> — o rompimento de uma intervenção divina que destrói a ordem atual e estabelece uma nova; só acontece quando Deus quer, e o homem não pode influenciar sua vinda. Abriu uma nova página na pesquisa do reino.']},
- {k:'sentido', t:'O sentido principal e o secundário', p:[
+ {k:'sentido', d:1, t:'O sentido principal e o secundário', p:[
   '<strong>Principal</strong>: os atos de Deus nos últimos dias que salvam seu povo dos seus inimigos. No AT os inimigos eram os impérios gentios; nos dias de Jesus, os <strong>espíritos malignos</strong> (a literatura apocalíptica mudou o foco do mundo terrestre para o espiritual).',
   'O sujeito é sempre <strong>Deus</strong>: o povo pode pedir, mas nunca controlá-lo; ele intervém quando quer. É o ato dinâmico de Deus como rei na realidade do seu povo, não nos corações (a obra no coração é a obra do Espírito Santo).',
   '<strong>Secundário</strong>: a área onde o ato de Deus atinge. Aplique primeiro o sentido principal; só quando não fizer sentido, use o secundário. BDAG: <em>basileia</em> = 1) o ato de domínio de um rei; 2) o território dominado. "<em>tou theou</em>" é genitivo subjetivo: Deus é o sujeito da ação. Exercício: Mc 1:15; Mc 4:11; Lc 8:10; Lc 9:11; Lc 13:28; Lc 16:16.']},
@@ -745,11 +750,11 @@ const MATERIA = [
  {k:'ceus', t:'O reino dos céus', p:[
   'Mateus usa "reino dos céus" com o mesmo sentido de "reino de Deus". Ex.: em Mt 11:12 ele troca o termo de Q preservado em Lc 16:16; em Mt 5:3 troca o "reino de Deus" de Lc 6:20; em Mt 4:17 troca o de Mc 1:15. Caragounis: não há base exegética para distinguir os dois termos (contra M. Pamment).',
   'Por quê? Mateus escrevia para uma comunidade mais judaica, que seguia a forma tradicional de se referir a Deus ("céus"), evitando mencionar "Deus" com bocas ritualmente impuras. Todos os livros do NT são textos ocasionais.']},
- {k:'originais', t:'Pontos originais do ensino de Jesus', p:[
+ {k:'originais', d:1, t:'Pontos originais do ensino de Jesus', p:[
   '1) <strong>"Aqui e agora!"</strong> — o reino não é só esperança, já chegou e está disponível. 2) <strong>"Para todo o mundo, não somente para os judeus!"</strong> (Mt 8:12; 13:38; Mc 10:15). 3) <strong>Não é um reino político na terra</strong>, mas o domínio escatológico eterno de Deus, que começa com o ministério de Jesus. 4) <strong>É através de Jesus que o reino se manifesta</strong> — ele é o único agente do reino. 5) <strong>"Chegou agora, mas a consumação é no futuro!"</strong>']}
 ]},
 {id:102, tag:'Reino', n:'2', titulo:'A necessidade do reino de Deus', secoes:[
- {k:'duas_eras', t:'As duas eras', p:[
+ {k:'duas_eras', d:1, t:'As duas eras', p:[
   'Jesus dividia a história em duas partes (Mt 12:32): <strong>"esta era"</strong> e <strong>"a era por vir"</strong>. Essa divisão vem da LAJI, e as duas eras são opostas.',
   '<strong>Esta era</strong>: fraqueza, mortalidade, mal, pecado e morte; seu rei é <strong>Satanás</strong>. O povo pedia: "Deus, Rei dos reis, venha à nossa situação e aja como Rei em nosso favor!".',
   '<strong>A era por vir</strong>: realização das promessas do reino — relacionamento restaurado com Deus, redenção, vida abundante, domínio de Israel sobre os impérios, peregrinação dos gentios a Jerusalém, glorificação do nome de Deus. Promessa × realização; esperar × experimentar.',
@@ -776,7 +781,7 @@ const MATERIA = [
   'No AT Deus também buscava seu povo, mas de forma <strong>indireta e ocasional</strong>, por meio dos profetas ("Deus dos profetas").',
   'No período do Segundo Templo (515 a.C.–70 d.C.) Deus era visto como transcendente, distante, sentado no trono do céu, sem intervir. O povo desejava que ele viesse e realizasse o ato redentor final.',
   'Nos ensinos de Jesus, Deus entra na história por meio de Jesus e vem ele mesmo buscar seu povo: uma busca <strong>direta</strong> (não via profetas) e <strong>permanente</strong> (não ocasional). É o clímax da história da salvação.']},
- {k:'lucas15', t:'As parábolas de Lucas 15', p:[
+ {k:'lucas15', d:1, t:'As parábolas de Lucas 15', p:[
   'O elemento comum da ovelha perdida, da moeda perdida e do filho pródigo é <strong>o Deus que busca</strong>: há sempre uma iniciativa divina (o pastor procura, a mulher varre, o pai anseia).',
   'A parábola do filho pródigo é sobre o <strong>pai</strong>, não sobre o filho: o pai é o protagonista e representa Deus. A mensagem central é o amor e a graça de Deus que busca o filho que não merece.']},
  {k:'convida', t:'2. O Deus que convida', p:[
@@ -799,7 +804,7 @@ const MATERIA = [
   '<strong>1 Enoque</strong> (hebraico, séc. III–I a.C.; apocalíptico, pseudepigráfico, apócrifo): nas "Visões dos sonhos", depois do julgamento Deus libertará Israel e punirá seu torturador. <strong>Sirácida / Eclesiástico</strong> (séc. II a.C., hebraico, por Ben Sira em Jerusalém): "O fogo consumirá nações hostis. Deus reunirá todas as tribos de Jacó".',
   '<strong>Sabedoria de Salomão</strong> (séc. I a.C.–I d.C., grego, provavelmente Alexandria): Deus devastará o reino dos sem-lei e inaugurará uma nova era. <strong>Testamento (Assunção) de Moisés</strong> (séc. II–I a.C.; profecias de Moisés a Josué): terremotos, escuridão do sol e da lua; então o reino virá de repente (cf. Mc 13:24–26). <strong>Salmos de Salomão</strong> (séc. II–I a.C.; 18 poemas): esperam a rápida intervenção de Deus, que estabelecerá o reino eterno pelo Filho de Davi, o Messias.',
   'Em todos o reino é algo por vir no futuro.']},
- {k:'diferenca', t:'A maior diferença', p:[
+ {k:'diferenca', d:1, t:'A maior diferença', p:[
   'A maior diferença entre a LAJI e Jesus é <strong>o tempo da vinda</strong>: a proclamação de que o reino já chegou não tem paralelos na LAJI. Beasley-Murray: "O fato mais distintivo na proclamação de Jesus do reino foi o seu presente <strong>irrompimento</strong> na história em sua própria pessoa e ministério."']},
  {k:'textos', t:'Textos do reino presente', p:[
   '<strong>Mt 12:28</strong>: <em>ephthasen</em> é aoristo — "veio"; <em>epi</em> + genitivo = "sobre", indicando o reino que chega de cima em favor do povo. <strong>Mt 12:29</strong>: Jesus amarrou o inimigo e libertou o povo, graças à vinda presente do reino.',
@@ -811,7 +816,7 @@ const MATERIA = [
   '4) <strong>Relacionamento com Deus restaurado</strong>: justificação → fim da inimizade → volta ao relacionamento original. Deus é Pai (o pai que dá coisas boas, o pai do pródigo, a mulher e a moeda, o pastor e a ovelha) — bênção abrangente que inclui muitas outras.']},
  {k:'como', t:'Como ser beneficiado', p:[
   'Basta aceitar e crer na proclamação de Jesus de que Deus está entrando na história por meio dele. A expressão dessa aceitação é <strong>receber o agente do reino</strong> — Jesus ou seus discípulos (cf. Jo 1:12). Zaqueu se tornou povo do reino quando recebeu Jesus em casa (Lc 19:6), não quando fez boas obras (19:8).']},
- {k:'vida_eterna', t:'Vida eterna', p:[
+ {k:'vida_eterna', d:1, t:'Vida eterna', p:[
   '"Herdar a vida eterna", "entrar no reino de Deus" e "ser salvo" eram sinônimos (Mc 10:17–27). <em>Zōē aiōnios</em>: o adjetivo pode significar "eterno" ou "da era"; aqui significa "da era" — a vida da <strong>nova era</strong>, iniciada com a vinda do reino.',
   'Portanto, vida eterna não é vida após a morte nem vida sem morte. Diante do convite há duas opções: aceitar ou não receber (Lc 10:8–9); quem aceita se torna povo de Deus e desfruta das bênçãos do reino presente.']}
 ]},
@@ -857,7 +862,7 @@ const MATERIA = [
   'Diferença: o <strong>joio</strong> mostra que o reino está presente num mundo onde pecadores e justos coexistem; a <strong>rede</strong> mostra que a igreja (os que aceitaram o convite) não é uma comunidade pura, e haverá uma separação final.']}
 ]},
 {id:107, tag:'Reino', n:'7', titulo:'O reino de Deus e a Igreja', secoes:[
- {k:'def', t:'O que é a igreja', p:[
+ {k:'def', d:1, t:'O que é a igreja', p:[
   'Jesus falava aramaico; as palavras aramaicas para "igreja" significam basicamente "comunidade". A LXX traduziu uma delas (qahal) por <strong>ekklēsia</strong>.',
   'A igreja é o grupo de pessoas que aceitaram Jesus como o <strong>único agente do reino de Deus</strong>, por meio de quem Deus se manifestou como Rei e começou a resgatar seu povo dos inimigos (Satanás e demônios).']},
  {k:'natureza', t:'A natureza da igreja', p:[
@@ -928,7 +933,12 @@ const LACUNAS = [
 {e:'A igreja é uma comunidade (_____): surgiu da fé em Jesus e continua o ministério dele nos últimos dias.', r:'escatológica', f:'107:natureza'},
 {e:'A LXX traduziu a palavra hebraica qahal ("comunidade") por (_____).', r:'ekklesia', a:['ecclesia','eclesia','ekklêsia'], f:'107:def'},
 {e:'Segundo Beasley-Murray, o fato mais distintivo da proclamação de Jesus foi o presente (_____) do reino na história.', r:'irrompimento', a:['irrupcao'], f:'104:diferenca'},
-{e:'Nos dias de Jesus, "herdar a vida eterna", "entrar no reino" e "ser (_____)" eram sinônimos.', r:'salvo', f:'104:vida_eterna'}
+{e:'Nos dias de Jesus, "herdar a vida eterna", "entrar no reino" e "ser (_____)" eram sinônimos.', r:'salvo', f:'104:vida_eterna'},
+{e:'Ao interpretar "reino de Deus", aplique primeiro o sentido (_____); só quando ele não fizer sentido use o secundário.', r:'principal', f:'101:sentido'},
+{e:'O elemento comum das três parábolas de Lucas 15 é o Deus que (_____).', r:'busca', f:'103:lucas15'},
+{e:'A igreja é o grupo de pessoas que aceitaram Jesus como o único (_____) do reino de Deus.', r:'agente', f:'107:def'},
+{e:'No sanduíche de Marcos, uma história é (_____) por outra e depois retomada.', r:'interrompida', f:'7:sanduiche'},
+{e:'Depois da ascensão, as histórias sobre Jesus foram transmitidas primeiro de forma (_____), antes das tradições escritas.', r:'oral', a:['oralmente'], f:'3:processo'}
 ];
 
 // Múltipla escolha: m = 'u' (uma), 't' (todas as corretas) ou 'n' (quantidade = nº de corretas). c = corretas, w = erradas.
@@ -1032,6 +1042,16 @@ const MULTIPLA = [
 {e:'Qual é a mensagem da parábola da rede?', c:['A separação entre justos e ímpios será feita no juízo final; por enquanto estão juntos'], w:['A igreja deve expulsar os pecadores agora','Os pescadores são os fariseus','O reino é apenas para os judeus'], f:'106:rede'},
 {e:'O que as "chaves do reino" representam em Mateus 16:19?', c:['A autoridade de admitir alguém no reino ou negar sua entrada'], w:['O poder de perdoar pecados por conta própria','A liderança política de Pedro','O acesso ao templo de Jerusalém'], f:'107:relacao4'},
 {e:'Como a igreja pode pregar o evangelho do reino?', m:'n', c:['Pela proclamação do reino de Deus','Pela vida do povo do reino (suas bênçãos e sua ética)'], w:['Pela força política','Pelas obras da lei'], f:'107:relacao2'},
+{e:'Qual facção do judaísmo tinha a influência mais ampla sobre a população e era a mais numerosa?', c:['A elite sacerdotal'], w:['Os saduceus','A comunidade de Qumran','Os zelotes'], f:'1:faccoes'},
+{e:'Qual era a hierarquia da comunidade de Qumran, do mais alto ao mais baixo?', c:['Sacerdotes → levitas → pessoas comuns'], w:['Levitas → sacerdotes → pessoas comuns','Rei davídico → sacerdotes → levitas','Fariseus → escribas → povo'], f:'1:qumran'},
+{e:'Quais tradições judaicas entravam em conflito com a ética e os princípios romanos?', m:'t', c:['A circuncisão','Não prestar homenagem aos deuses romanos','Não se curvar diante da estátua do imperador'], w:['Falar grego koiné','Viver nas cidades helenísticas'], f:'2:tensao'},
+{e:'Qual era a resposta típica das autoridades romanas aos cristãos?', m:'n', c:['Ignorá-los, por serem poucos','Esperar que desaparecessem','Acusar e perseguir quando descobriam ofensas (como não se curvar à estátua do imperador)'], w:['Conceder-lhes cidadania romana','Obrigá-los a se circuncidar'], f:'2:cristaos'},
+{e:'O que fazem os críticos da forma?', c:['Identificam as perícopes, classificam seus gêneros, reconstroem suas formas originais e investigam o Sitz im Leben'], w:['Comparam manuscritos para achar o texto original','Estudam cada Evangelho apenas como obra literária inteira','Investigam a arqueologia da Galileia'], f:'3:sitz'},
+{e:'Quais são as duas abordagens necessárias para entender os Evangelhos?', c:['Analisar as tradições individuais (crítica da forma) e o Evangelho inteiro como obra (narratologia)'], w:['Crítica textual e arqueologia','Alegoria e tipologia','Leitura devocional e leitura histórica'], f:'3:criticas'},
+{e:'Quais semelhanças entre os sinóticos a aula apresenta?', m:'t', c:['Os versículos paralelos','A ordem dos eventos','A citação do Antigo Testamento (Malaquias 3:1)'], w:['O mesmo relato do nascimento de Jesus nos três','O prólogo sobre o Logos'], f:'4:paralelos'},
+{e:'Quais são evidências da interdependência literária entre os sinóticos?', m:'t', c:['Acordos verbais','Conteúdo (mesmas estruturas e formas gramaticais)','A mesma ordem dos episódios','Cláusulas parentéticas como "quem lê, entenda"','A tradição tripla e a tradição dupla'], w:['Manuscritos antigos da fonte Q'], f:'4:evidencias'},
+{e:'Quais contrastes resumem "esta era" × "a era por vir"?', c:['Promessa × realização; esperar × experimentar'], w:['Lei × graça; obras × fé','Judeus × gentios','Céu × terra'], f:'102:duas_eras'},
+{e:'Qual é o tema central do Evangelho de Marcos?', c:['A identidade de Jesus e suas implicações para o discipulado'], w:['A genealogia e o nascimento de Jesus','A missão aos gentios','A lei de Moisés e a pureza ritual'], f:'7:tema'},
 {e:'Qual é a sequência dos agentes do reino ao longo do tempo?', c:['Jesus → 12 discípulos → Igreja'], w:['Profetas → Jesus → Igreja','Igreja → apóstolos → Jesus','Moisés → Davi → Jesus'], f:'107:relacao3'}
 ];
 
@@ -1044,6 +1064,8 @@ const DISSERTATIVAS_BASE = [
 {p:true, e:'Por que Marcos apresenta Jesus escondendo e depois revelando sua identidade? Considere a necessidade da comunidade.', g:'A comunidade era perseguida, tinha uma "teologia da glória" e corria risco de apostasia. Até 8:26 Jesus manda calar quando é visto como messias glorioso; a partir de 8:27 ele se revela como o Servo sofredor (8:31; 10:45; 15:39). Assim Marcos mostra que Jesus é o Messias que sofre e que o caminho do discípulo é o da cruz.', f:'8:cristologica'},
 {p:true, e:'Faça uma crítica do sermão "Como o cristão pode vencer vivendo em meio às ondas da vida", baseado em Marcos 4:35–41.', g:'O pregador leu uma narrativa de milagre como se fosse alegoria. O foco do texto é a identidade e a autoridade de Jesus, como mostra a pergunta final: "Quem é este que até o vento e o mar lhe obedecem?". Confiar em Jesus nas crises é verdade, mas não é a mensagem central desse texto.', f:'3:sermao_critica'},
 {p:true, e:'Depois de 8:31 a ordem de silêncio não se repete em Marcos, "exceto em 9:9". Por quê?', g:'<em>Resposta sugerida (o slide só traz a pergunta):</em> em 9:9 o silêncio tem prazo: "até que o Filho do Homem ressuscite dentre os mortos". A glória vista na transfiguração só pode ser anunciada corretamente depois da cruz e da ressurreição, ou seja, depois do sofrimento do Filho do Homem.', f:'8:locais'},
+{p:true, e:'Se o autor bíblico escreveu num gênero literário e os primeiros leitores o leram segundo as convenções desse gênero, será que hoje podemos chegar ao significado pretendido pelo autor sem usar o mesmo método de leitura?', g:'<em>Resposta sugerida (o slide só traz a pergunta):</em> dificilmente. O gênero determina como o texto deve ser lido; por isso precisamos ler cada texto segundo o seu gênero, como o público de Jesus fazia: na parábola, buscar a mensagem central; no apocalíptico, perguntar a que o símbolo se refere; na narrativa histórica, o que aconteceu.', f:'3:leitura_publico'},
+{e:'Explique, em poucas frases, o que o autor faz numa narrativa e o que acontece com o leitor.', g:'O autor constrói um mundo narrativo ao selecionar e organizar o período, os acontecimentos, os personagens, a ordem e a forma de descrevê-los. Ele convida o leitor para dentro desse mundo, e o leitor sente, pensa, julga e às vezes toma decisões sobre sua própria vida. Uma narrativa bem construída conduz o leitor à reação que o autor pretende.', f:'6:convite'},
 {e:'Qual é o sentido principal e o sentido secundário da expressão "reino de Deus"?', g:'Principal: os atos de Deus nos últimos dias que salvam seu povo dos seus inimigos; Deus é sempre o sujeito, e o ato acontece na realidade, não só no coração. Secundário: a área onde esse ato de Deus chega. Deve-se aplicar primeiro o sentido principal.', f:'101:sentido'},
 {e:'Explique a expressão "real mas parcial" ("já, mas ainda não") sobre o reino de Deus.', g:'Desde o início do ministério de Jesus o reino age de verdade (curas, perdão, justificação, convite), mas ainda não em todo lugar: nem todos foram curados nem julgados. A consumação completa virá na Parusia.', f:'102:linha'},
 {e:'Descreva a comunidade marcana.', g:'Uma comunidade fora da Palestina (Roma ou Síria), formada principalmente por cristãos judeus da diáspora. Era perseguida, tinha uma "teologia da glória" e esperava a parusia para logo. A realidade de sofrimento gerou uma crise de fé e risco de apostasia.', f:'7:resumo_comunidade'}
@@ -1061,7 +1083,7 @@ function fonte(f) {
   const l = MATERIA.find(x => x.id == id);
   const s = l && l.secoes.find(x => x.k === k);
   if (!s) throw new Error('fonte inválida: ' + f);
-  return { licao: l.id, paragrafoIds: s.paragrafoIds };
+  return { licao: l.id, paragrafoIds: s.paragrafoIds, destaque: !!s.d };
 }
 
 // Embaralhamento determinístico: a posição da alternativa correta varia, mas é sempre a mesma para cada questão.
@@ -1095,6 +1117,17 @@ const SIMULADOS = Array.from({ length: NSIM }, (_, s) => ({
     multipla: MULTIPLA.filter((_, i) => i % NSIM === s).slice(0, 10).map((q, k) => montarMC(q, k + 6, s * 31 + k * 7 + 3))
   }
 }));
+
+// Simulado extra só com as questões dos trechos marcados em amarelo nos slides.
+{
+  const lac = LACUNAS.filter(q => fonte(q.f).destaque), mc = MULTIPLA.filter(q => fonte(q.f).destaque);
+  SIMULADOS.push({ numero: SIMULADOS.length + 1, destaque: true, dados: {
+    lacunas: lac.map((q, k) => ({ numero: k + 1, enunciado: q.e, resposta: q.r, aceitas: q.a || [], fonte: fonte(q.f) })),
+    multipla: mc.map((q, k) => montarMC(q, lac.length + k + 1, 500 + k * 7))
+  }});
+}
+const simNome = s => s.destaque ? 'Destaques ⭐' : 'Simulado ' + s.numero;
+const TAG_DESTAQUE = '<span class="destaque-tag">⭐ marcado nos slides</span>';
 
 const DISSERTATIVAS = DISSERTATIVAS_BASE.map((q, i) => ({ numero: i + 1, enunciado: q.e, gabarito: q.g, professor: !!q.p, fonte: fonte(q.f) }));
 
@@ -1145,7 +1178,7 @@ function renderHome() {
       <div class="home-inner">
         <span class="home-badge">Sinóticos e Atos · Prof. Denis Song</span>
         <h1 class="home-title">Simulados<br><span>AV1</span></h1>
-        <p class="home-sub">${SIMULADOS.length} simulados · Aulas 1 a 8 + Reino de Deus · Correção automática</p>
+        <p class="home-sub">${SIMULADOS.length - 1} simulados · Aulas 1 a 8 + Reino de Deus · Correção automática</p>
         <div class="format-pills">
           <span class="pill">${DISSERTATIVAS.length} dissertativas</span>
           <span class="pill">5 lacunas</span>
@@ -1154,10 +1187,11 @@ function renderHome() {
         <div class="home-nav">
           <button class="home-nav-btn primary" onclick="renderDissertativas()">📝&nbsp;&nbsp;Questões Dissertativas</button>
           <button class="home-nav-btn secondary" onclick="renderMateriaIndex()">📖&nbsp;&nbsp;Material de Estudo</button>
+          <button class="home-nav-btn secondary destaque-btn" onclick="startSim(${SIMULADOS.length - 1})">⭐&nbsp;&nbsp;Só o que foi marcado nos slides</button>
         </div>
         <p class="home-grid-label">ou escolha um simulado</p>
         <div class="sim-grid">
-          ${SIMULADOS.map((s,i) => `<button class="sim-chip" onclick="startSim(${i})">${s.numero}</button>`).join('')}
+          ${SIMULADOS.filter(s => !s.destaque).map((s,i) => `<button class="sim-chip" onclick="startSim(${i})">${s.numero}</button>`).join('')}
         </div>
       </div>
       <span class="dedicatoria">ideias de meu grande amigo Rapha Lourenço</span>
@@ -1191,6 +1225,7 @@ function renderDissertativas() {
         <div style="flex:1">
           ${q.professor ? '<span class="prof-badge">Pergunta do professor</span><br>' : ''}
           <p class="q-enunciado">${q.enunciado}</p>
+          ${q.fonte.destaque ? TAG_DESTAQUE : ''}
         </div>
       </div>
       <textarea class="q-textarea" rows="3" placeholder="Sua resposta…" oninput="setResp('d_${q.numero}',this.value)">${esc(val)}</textarea>
@@ -1299,7 +1334,7 @@ function renderMateriaIndex() {
   html += `<div class="page-head">
     <span class="page-eyebrow">Aulas 1 a 8 + Reino de Deus</span>
     <h1 class="page-title">Material de Estudo</h1>
-    <p class="page-sub">Resumo das aulas e dos textos sobre o Reino de Deus. Toque em um item para ler.</p>
+    <p class="page-sub">Resumo das aulas e dos textos sobre o Reino de Deus. As partes com ⭐ foram marcadas em amarelo nos slides — prováveis perguntas de prova.</p>
   </div>`;
 
   html += '<div class="materia-toc">';
@@ -1350,8 +1385,8 @@ function renderLicao(idx, highlightIds) {
   </div>`;
 
   licao.secoes.forEach(secao => {
-    html += `<div class="licao-secao">
-      <h3 class="licao-subtitulo">${secao.subtitulo}</h3>
+    html += `<div class="licao-secao ${secao.d ? 'marcado' : ''}">
+      <h3 class="licao-subtitulo">${secao.subtitulo}${secao.d ? ' ' + TAG_DESTAQUE : ''}</h3>
       ${secao.paragrafos.map((p, pIdx) => {
         const pid = secao.paragrafoIds[pIdx];
         const isHighlighted = highlightIds && highlightIds.includes(pid);
@@ -1475,11 +1510,11 @@ function renderSim() {
   let html = `<div class="topbar">
     <div class="topbar-left">
       ${!corrigido ? `<span id="progress-ring-container">${ring(progressPct, 30)}</span>` : `<div class="completed-badge">${ICON_CHECK}</div>`}
-      <span class="topbar-title">Simulado ${sim.numero}</span>
+      <span class="topbar-title">${simNome(sim)}</span>
     </div>
     <div class="topbar-right">
       <select class="select-pill" onchange="startSim(this.value)">
-        ${SIMULADOS.map((s,i)=>`<option value="${i}" ${i===currentSim?'selected':''}>Simulado ${s.numero}</option>`).join('')}
+        ${SIMULADOS.map((s,i)=>`<option value="${i}" ${i===currentSim?'selected':''}>${simNome(s)}</option>`).join('')}
       </select>
       <button class="btn-pill" onclick="reiniciarSimulado()" title="Apagar respostas e recomeçar este simulado">${ICON_RESET} Reiniciar</button>
       <button class="btn-pill" onclick="renderDissertativas()">Dissertativas</button>
@@ -1517,8 +1552,8 @@ function renderSim() {
     </div>`;
   } else {
     html += `<div class="page-head">
-      <span class="page-eyebrow">Simulado ${sim.numero} de ${SIMULADOS.length}</span>
-      <h1 class="page-title">Lacunas &amp; Múltipla escolha</h1>
+      <span class="page-eyebrow">${sim.destaque ? 'Só trechos marcados em amarelo nos slides' : `Simulado ${sim.numero} de ${SIMULADOS.length - 1}`}</span>
+      <h1 class="page-title">${sim.destaque ? 'Revisão dos destaques' : 'Lacunas &amp; Múltipla escolha'}</h1>
       <p class="page-sub">${done} de ${total} questões respondidas</p>
     </div>`;
   }
@@ -1537,6 +1572,7 @@ function renderSim() {
           ${partes[0]}<input type="text" class="lacuna-input ${status==='correct'?'ok':status?'err':''}" value="${esc(val)}" ${corrigido?'disabled':''} placeholder="___" autocomplete="off" oninput="setResp('l_${q.numero}',this.value)" />${partes[1]||''}
         </div>
       </div>
+      ${q.fonte.destaque && !sim.destaque ? TAG_DESTAQUE : ''}
       ${corrigido ? `<p class="gab-lacuna visible ${ok?'ok':'err'}">${ok?ICON_CHECK+' Correto!':ICON_X+' Resposta: '+q.resposta}</p>` : ''}
       ${corrigido ? `<button class="btn-fonte" onclick='showFonteModal(${q.fonte.licao}, ${JSON.stringify(q.fonte.paragrafoIds)})'>📖 Ver no material</button>` : ''}
     </div>`;
@@ -1552,6 +1588,7 @@ function renderSim() {
         <div>
           <p class="q-enunciado">${q.enunciado}</p>
           <p class="q-instrucao">${q.instrucao_local}</p>
+          ${q.fonte.destaque && !sim.destaque ? TAG_DESTAQUE : ''}
         </div>
       </div>
       <div class="alt-list">
