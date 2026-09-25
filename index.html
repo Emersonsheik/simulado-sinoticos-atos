@@ -433,6 +433,8 @@ button{font-family:inherit}
   .action-row{flex-direction:column}
   .action-row .btn-block{width:100%}
 }
+.home{position:relative}
+.dedicatoria{position:absolute;right:.9rem;bottom:.7rem;font-size:.62rem;font-style:italic;color:var(--ink-faint);opacity:.8}
 .prof-badge{
   display:inline-flex;align-items:center;gap:.3rem;
   background:var(--teal-bg);color:var(--teal);font-size:.68rem;font-weight:800;
@@ -1158,6 +1160,7 @@ function renderHome() {
           ${SIMULADOS.map((s,i) => `<button class="sim-chip" onclick="startSim(${i})">${s.numero}</button>`).join('')}
         </div>
       </div>
+      <span class="dedicatoria">ideias de meu grande amigo Rapha Lourenço</span>
     </div>
   `;
 }
